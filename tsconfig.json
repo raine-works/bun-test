@@ -1,0 +1,3 @@
+{
+  "extends": "@bun-test/tsconfig/base.json"
+}

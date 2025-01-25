@@ -1,0 +1,21 @@
+{
+  "name": "bun-test",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo build",
+    "dev": "turbo dev"
+  },
+  "devDependencies": {
+    "@bun-test/tsconfig": "workspace:*",
+    "bun-types": "1.2.0",
+    "turbo": "2.3.4"
+  },
+  "peerDependencies": {
+    "typescript": "5.7.3"
+  },
+  "packageManager": "bun@1.2.0"
+}
