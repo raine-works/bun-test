@@ -1,15 +1,16 @@
-import { serve } from "bun";
+import { serve, env } from "bun";
 import { app } from "@/backend";
-import html from "@/frontend/index.html";
+import root from "@/frontend/index.html";
 
 ((port: number) => {
   serve({
-    // development: Bun.env.NODE_ENV === "devlopment",
-    static: {
-      "/": html,
-    },
     port,
+    development: env.NODE_ENV === "development",
     fetch: app.fetch,
+    static: {
+      "/": root,
+      "/about": root,
+    },
   });
   console.log(`Server running at http://localhost:${port}`);
 })(8000);
