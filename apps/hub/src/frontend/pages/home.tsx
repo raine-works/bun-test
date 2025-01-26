@@ -16,7 +16,7 @@ export function Home() {
 
 	React.useEffect(() => {
 		getApiData();
-	});
+	}, []);
 
 	return (
 		<>

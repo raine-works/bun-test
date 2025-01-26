@@ -12,7 +12,8 @@ import root from '@/frontend/index.html';
 			'/about': root
 		}
 	});
-	console.log(`Server running at http://localhost:${port}`);
+	console.log(`Starting server in ${env.NODE_ENV} mode.`);
+	console.log(`Listening at http://localhost:${port}`);
 })(8000);
 
 process.on('SIGINT', () => {
