@@ -1,0 +1,4 @@
+#!/bin/bash
+
+bun run format
+git add -A .
